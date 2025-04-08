@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Colebank and Teague Cosmetic Dermatology</title>
   <style>
+    :root {
+      --indigo-500: #6610f2;
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
     }
 
     body {
@@ -17,48 +21,102 @@
       color: #2e2e2e;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
+      height: 100vh;
     }
 
     header {
-      background-color: #6a0dad;
-      padding: 1.5rem;
-      text-align: center;
+      background-color: var(--indigo-500);
+      padding: 0.75rem 2rem;
+      display: flex;
+      align-items: center;
       color: #fff;
-      font-size: 2rem;
+    }
+
+    header img {
+      height: 40px;
+      margin-right: 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
       font-weight: bold;
+      text-align: center;
+      width: 100%;
     }
 
     main {
       flex: 1;
       display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+    }
+
+    .locations {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .location-card {
+      display: flex;
       flex-direction: column;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
+      background: #fff;
+      border-radius: 0;
+      overflow: hidden;
+      padding: 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .location-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .location-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .location-content {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.85);
+      width: 100%;
       text-align: center;
-      padding: 2rem;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
     }
 
-    .about {
-      max-width: 600px;
-      margin-bottom: 2rem;
-      font-size: 1.25rem;
-      color: #4b0082;
+    .location-name {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--indigo-500);
+      margin-bottom: 0.5rem;
     }
 
-    .call-number {
-      font-size: 3rem;
+    .location-phone a {
       color: #ffcc00;
       font-weight: bold;
-    }
-
-    .call-number a {
+      font-size: 1.5rem;
       text-decoration: none;
-      color: #ffcc00;
     }
 
     footer {
-      background-color: #6a0dad;
+      background-color: var(--indigo-500);
       color: #fff;
       text-align: center;
       padding: 1rem;
@@ -70,14 +128,34 @@
 </head>
 <body>
   <header>
-    Colebank and Teague Cosmetic Dermatology
+    <img src="https://via.placeholder.com/40x40?text=Logo" alt="Logo">
+    <h1>Colebank and Teague Cosmetic Dermatology</h1>
   </header>
   <main>
-    <div class="about">
-      David and John left the oil industry because of aggressive curiosity to disrupt the cosmetic dermatology industry.
-    </div>
-    <div class="call-number">
-      <a href="tel:9196372238">Call: 919-637-2238</a>
+    <div class="locations">
+      <div class="location-card">
+        <img src="wilmington.jpg" alt="Wilmington Office" />
+        <div class="location-content">
+          <div class="location-name">Wilmington Office</div>
+          <div class="location-phone"><a href="tel:9196372239">919-637-2239</a></div>
+        </div>
+      </div>
+
+      <div class="location-card">
+        <img src="raleigh.jpg" alt="Raleigh Office" />
+        <div class="location-content">
+          <div class="location-name">Raleigh Office</div>
+          <div class="location-phone"><a href="tel:9196372238">919-637-2238</a></div>
+        </div>
+      </div>
+
+      <div class="location-card">
+        <img src="charlotte.jpg" alt="Charlotte Office" />
+        <div class="location-content">
+          <div class="location-name">Charlotte Office</div>
+          <div class="location-phone"><a href="tel:9196372237">919-637-2237</a></div>
+        </div>
+      </div>
     </div>
   </main>
   <footer>
