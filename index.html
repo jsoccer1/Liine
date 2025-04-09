@@ -6,40 +6,39 @@
   <title>Colebank and Teague Cosmetic Dermatology</title>
   <link rel="icon" type="image/svg+xml" href="liinelogo.svg" sizes="any" />
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --indigo-500: #6610f2;
       --yellow-accent: #ffcc00;
       --dark-bg: #121212;
-      --card-overlay: rgba(18, 18, 18, 0.3);
+      --glass-bg: rgba(255, 255, 255, 0.08);
     }
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
     }
 
     body {
       background-color: var(--dark-bg);
       color: #f0f0f0;
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-      overflow-x: hidden;
+      font-family: 'Raleway', sans-serif;
     }
 
     header {
       background: linear-gradient(270deg, #6a11cb, #2575fc);
       background-size: 400% 400%;
       animation: gradientShift 10s ease infinite;
-      padding: 1rem 2rem;
+      padding: 2rem 1.5rem 1rem;
       display: flex;
-      align-items: center;
-      gap: 1rem;
-      border-bottom: 4px solid #fff;
-      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.15);
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
 
     @keyframes gradientShift {
@@ -53,30 +52,27 @@
       filter: drop-shadow(0 0 4px #fff);
     }
 
-    header h1 {
-      font-size: 2rem;
+    .header-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
       font-weight: 600;
       color: #ffffff;
     }
 
-    main {
-      flex: 1;
-      display: flex;
-      align-items: stretch;
-      justify-content: space-between;
+    .header-subtitle {
+      font-size: 1.25rem;
+      color: #e0e0e0;
     }
 
     .locations {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      width: 100%;
       height: 500px;
     }
 
     .location-card {
       position: relative;
       overflow: hidden;
-      background-color: #1e1e1e;
     }
 
     .location-card img {
@@ -93,19 +89,31 @@
     .location-content {
       position: relative;
       z-index: 1;
-      width: 100%;
       height: 100%;
-      background: var(--card-overlay);
+      width: 100%;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+
+    .glass-card {
+      background-color: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      padding: 1.5rem 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
       text-align: center;
-      padding: 1.5rem;
+      cursor: default;
+    }
+
+    .glass-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
     }
 
     .location-name {
-      font-size: 2rem;
+      font-size: 1.75rem;
       font-weight: bold;
       color: var(--indigo-500);
       margin-bottom: 0.5rem;
@@ -114,7 +122,7 @@
     .location-phone a {
       color: var(--yellow-accent);
       font-weight: bold;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       text-decoration: none;
     }
 
@@ -133,9 +141,9 @@
       height: 300px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       header {
-        flex-direction: column;
+        align-items: center;
         text-align: center;
       }
 
@@ -144,12 +152,8 @@
         height: auto;
       }
 
-      .location-name {
-        font-size: 1.5rem;
-      }
-
-      .location-phone a {
-        font-size: 1.2rem;
+      .glass-card {
+        margin: 1rem;
       }
     }
   </style>
@@ -160,7 +164,8 @@
 <body>
   <header>
     <img src="liinelogo.svg" alt="Logo" />
-    <h1>Colebank and Teague Cosmetic Dermatology</h1>
+    <div class="header-title">Colebank and Teague</div>
+    <div class="header-subtitle">Cosmetic Dermatology</div>
   </header>
 
   <main>
@@ -168,24 +173,30 @@
       <div class="location-card">
         <img src="wilmington.jpg" alt="Wilmington Office" />
         <div class="location-content">
-          <div class="location-name">Wilmington Office</div>
-          <div class="location-phone"><a href="tel:9102086221">(910) 208-6221</a></div>
+          <div class="glass-card">
+            <div class="location-name">Wilmington Office</div>
+            <div class="location-phone"><a href="tel:9102086221">(910) 208-6221</a></div>
+          </div>
         </div>
       </div>
 
       <div class="location-card">
         <img src="raleigh.jpg" alt="Raleigh Office" />
         <div class="location-content">
-          <div class="location-name">Raleigh Office</div>
-          <div class="location-phone"><a href="tel:9192345591">(919) 234-5591</a></div>
+          <div class="glass-card">
+            <div class="location-name">Raleigh Office</div>
+            <div class="location-phone"><a href="tel:9192345591">(919) 234-5591</a></div>
+          </div>
         </div>
       </div>
 
       <div class="location-card">
         <img src="charlotte.jpeg" alt="Charlotte Office" />
         <div class="location-content">
-          <div class="location-name">Charlotte Office</div>
-          <div class="location-phone"><a href="tel:7042512742">(704) 251-2742</a></div>
+          <div class="glass-card">
+            <div class="location-name">Charlotte Office</div>
+            <div class="location-phone"><a href="tel:7042512742">(704) 251-2742</a></div>
+          </div>
         </div>
       </div>
     </div>
