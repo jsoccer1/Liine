@@ -6,8 +6,8 @@
   <title>Colebank and Teague Cosmetic Dermatology</title>
   <link rel="icon" type="image/svg+xml" href="liinelogo.svg" sizes="any" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -33,11 +33,10 @@
       background: linear-gradient(270deg, #6a11cb, #2575fc);
       background-size: 400% 400%;
       animation: gradientShift 10s ease infinite;
-      padding: 2rem 1.5rem 1rem;
+      padding: 1rem 1.5rem;
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.75rem;
+      align-items: center;
+      gap: 1.25rem;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
 
@@ -48,19 +47,23 @@
     }
 
     header img {
-      height: 50px;
+      height: 40px;
       filter: drop-shadow(0 0 4px #fff);
     }
 
+    .header-text {
+      display: flex;
+      flex-direction: column;
+    }
+
     .header-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      font-weight: 600;
+      font-size: 1.5rem;
+      font-weight: 700;
       color: #ffffff;
     }
 
     .header-subtitle {
-      font-size: 1.25rem;
+      font-size: 1rem;
       color: #e0e0e0;
     }
 
@@ -114,14 +117,14 @@
 
     .location-name {
       font-size: 1.75rem;
-      font-weight: bold;
+      font-weight: 700;
       color: var(--indigo-500);
       margin-bottom: 0.5rem;
     }
 
     .location-phone a {
       color: var(--yellow-accent);
-      font-weight: bold;
+      font-weight: 600;
       font-size: 1.3rem;
       text-decoration: none;
     }
@@ -143,6 +146,7 @@
 
     @media (max-width: 768px) {
       header {
+        flex-direction: column;
         align-items: center;
         text-align: center;
       }
@@ -164,8 +168,10 @@
 <body>
   <header>
     <img src="liinelogo.svg" alt="Logo" />
-    <div class="header-title">Colebank and Teague</div>
-    <div class="header-subtitle">Cosmetic Dermatology</div>
+    <div class="header-text">
+      <div class="header-title">Colebank and Teague</div>
+      <div class="header-subtitle">Cosmetic Dermatology</div>
+    </div>
   </header>
 
   <main>
