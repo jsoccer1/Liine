@@ -68,14 +68,13 @@
     .locations {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 0;
+      gap: 1rem;
     }
 
     .location-card {
       position: relative;
       overflow: hidden;
-      min-height: 650px;
-      aspect-ratio: 2 / 3;
+      height: 650px;
     }
 
     .location-card img {
@@ -87,11 +86,6 @@
       top: 0;
       left: 0;
       z-index: 0;
-    }
-
-    .location-card.charlotte img {
-      object-position: center top;
-      transform: translateY(10%);
     }
 
     .location-content {
@@ -160,6 +154,7 @@
 
       .locations {
         grid-template-columns: 1fr;
+        height: auto;
       }
 
       .glass-card {
@@ -176,6 +171,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+  
     gtag('config', 'G-VZCDKRER1C');
   </script>
 </head>
@@ -210,7 +206,7 @@
         </div>
       </div>
 
-      <div class="location-card charlotte">
+      <div class="location-card">
         <img src="charlotte.jpeg" alt="Charlotte Office" />
         <div class="location-content">
           <div class="glass-card">
@@ -234,5 +230,6 @@
     </script>
     Liine Admin Project
   </footer>
+
 </body>
 </html>
