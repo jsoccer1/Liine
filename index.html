@@ -46,21 +46,22 @@
     }
 
     .book-button {
-      background-color: var(--glass-bg);
-      backdrop-filter: blur(10px);
-      color: var(--yellow-accent);
-      padding: 0.6rem 1.2rem;
-      border-radius: 9999px;
+      background-color: white;
+      color: var(--dark-bg);
       font-weight: 700;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
       text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
       transition: all 0.3s ease;
-      border: 2px solid var(--yellow-accent);
+      margin-left: auto;
     }
-
+    
     .book-button:hover {
       transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
     }
 
     header img {
@@ -199,12 +200,12 @@
 </head>
 <body>
   <header>
-    <a href="book.html" class="book-button">Book Online</a>
     <img src="liinelogo.svg" alt="Logo" />
     <div class="header-text">
       <div class="header-title">Colebank and Teague</div>
       <div class="header-subtitle">Cosmetic Dermatology</div>
     </div>
+    <a href="book.html" class="book-button">Book Online</a>
   </header>
 
   <main>
